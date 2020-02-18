@@ -1,8 +1,15 @@
 @font-face{
-    font-family: "Lato";
+    font-family: "Lato Regular";
     src: url(./assets/fonts/Lato-Regular.ttf);
 }
-
+@font-face{
+    font-family: "Lato Bold";
+    src: url(./assets/fonts/Lato-Bold.ttf);
+}
+@font-face{
+    font-family: "Lato Medium";
+    src: url(./assets/fonts/Lato-Medium.ttf);
+}
 .header{
     background-color: #2d303a;
     height: 95px;
@@ -24,18 +31,17 @@
 .logo{
     display: flex;
     float: left;
-    margin-top: 43px;
-    margin-left: 41px;
+    margin-top: 41px;
+    margin-left: 40px;
     
 }
 .singolo_text{
     font-size: 25px;
     line-height: 6px;
-    font-family: 'Lato Regular';
-    font-weight: 500;    
+    font-family: 'Lato Medium';    
     text-transform: uppercase;
     color: #ffffff;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.3px;
        
     
 }
@@ -57,8 +63,9 @@
     color: #ffffff;
     padding:15px;
     letter-spacing: -0.15px;
+    text-decoration: none;
 }
-.header-list_element:first-child{
+.header-list_element:hover{
     color: #f06c64;
 }
 .header-list_element::after{
@@ -72,5 +79,53 @@
 }
 .header-list_element:last-child::after{
     display: none;
+}
+.slider{
+    background-color: #f06c64;
+    height: 600px;
+}
+.slider_content{
+    width: 1020px;
+    height: 600px;
+    margin: auto;
+    background-color: b#f06c64;
+}
+.left_arrow{
+    height: 27px;
+    width: 16px;
+    float: left;
+    margin-top: 281px;
+    margin-left: 42px;
+   
+}
+.right_arrow{
+    height: 27px;
+    width: 16px;
+    float: right;
+    margin-top: 281px;
+    margin-right: 40px;
+}
+.right_arrow_image{
+    transform: scale(-1, 1);
+}
+.left_arrow_image:hover{
+    transform: scale(1.5);
+}
+.right_arrow_image:hover{
+    transform: scale(1.5) scale(-1, 1);
+}
+.vertical_phone{
+    width: 240px;
+    height: 483px;    
+    float: left;
+    margin-top: 53px;
+    margin-left: 54px;    
+}
+.horizontal_phone{
+    height: 240px;
+    width: 483px;
+    float: left;
+    margin-top: 174px;
+    margin-left: 73px;
 }
 
