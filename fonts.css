@@ -22,3 +22,7 @@
     font-family: "Lato Hairline";
     src: url(./assets/fonts/Lato-Hairline.ttf);
 }
+@font-face{
+    font-family: "Lato Heavy";
+    src: url(./assets/fonts/Lato-Heavy.ttf);
+}

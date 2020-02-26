@@ -15,7 +15,7 @@
     padding-left: 41px;
     padding-top: 68px;
 }
-.portfolio_logo h1{
+.portfolio_logo h2{
     font-size: 30px;
     line-height: 18px;
     color: #666d89;
@@ -87,3 +87,89 @@
     width: 220px;
     height: 187px;
 }
+.about_us{
+    width: 100%;
+    height: 734px;
+    background-color: #f2f2f2;
+    box-shadow: inset 0 -6px #ffffff;
+}
+.about_us--content{
+    width: 1020px;
+    height: 734px;
+    margin: auto;
+    background-color: #f2f2f2;
+    box-shadow: inset 0 -6px #ffffff;
+}
+.about_us--text{
+    padding-left: 40px;
+}
+.about_us--text h2{
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato Heavy";
+    text-align: left;
+    padding-top: 68px;
+    word-spacing: -2px;
+    letter-spacing: 0.2px;
+}
+.about_us--text p{
+    padding-top: 27px;
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato Regular";
+    text-align: left;
+    letter-spacing: -0.1px;
+    word-spacing: -0.6px;
+}
+.about_us--flex{
+    height: 443px;
+    padding: 48px 40px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about_us--flex div{
+    width: 300px;
+}
+.about_us--flex div h3{
+    padding-top: 14px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato Heavy";
+    text-align: left;
+}
+.about_us--flex div p{
+    padding-top: 10px;
+    width: 300px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato Regular";
+    text-align: left;    
+}
+.about_us--social_networks{
+
+    padding-top: 21px;
+    display: flex;
+}
+.about_us--social_networks img{
+    width: 35px;
+    height: 35px;
+    padding-right: 5px;
+}
+.about_us--social_networks img:hover{
+    width: 35px;
+    height: 35px;
+    padding-right: 5px;
+    transform: scale(1.2);
+}
+.fix5{
+    word-spacing: -2px;
+    letter-spacing: 0.05px;
+}
+
