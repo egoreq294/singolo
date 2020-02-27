@@ -6,6 +6,7 @@
 }
 .get_a_quote--content{
     width: 1020px;
+    height: 654px;
     margin: auto;
 }
 .get_a_quote--text h2{
@@ -128,5 +129,34 @@ a{
 .get_a_qoute--infos_pic_phone{
     padding-left: 1px;
 }
+.footer{
+    height: 76px;
+    width: 100%;
+    background-color: #2d303a;
+}
+.footer--content{
+    width: 1020px;
+    height: 76px;
+    margin: auto;
+}
+.footer--content p{
+    float: left;
+    padding: 32px 0px 0px 42px;
+    color: #666d89;
+    font-size: 12px;
+}
+.footer--social_networks{
+    float: right;
+    padding: 21px 37px 0px 0px;
+}
+.footer--social_networks img:hover{
+    transform: scale(1.2);
+    padding-right: 1px;
+}
+.footer--social_networks img{
+    padding-right: 1px;
+}
+
+
 
 
