@@ -132,9 +132,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about_us--flex div{
-    width: 300px;
-}
 .about_us--flex div h3{
     padding-top: 14px;
     font-size: 18px;

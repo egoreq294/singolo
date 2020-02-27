@@ -1,0 +1,132 @@
+.get_a_quote{
+    width: 100%;
+    height: 654px;
+    box-shadow: inset 0 -6px #ea676b;
+    background-color: #f06c64;
+}
+.get_a_quote--content{
+    width: 1020px;
+    margin: auto;
+}
+.get_a_quote--text h2{
+    font-size: 30px;
+    line-height: 18px;
+    color: #f0d8d9;
+    font-family: "Lato Heavy";
+    text-align: left;
+    padding: 68px 40px 0 40px;
+}
+.get_a_quote--text p{
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #f0d8d9;
+    font-family: "Lato Regular";
+    text-align: left;
+    padding: 27px 40px 0 40px;
+    letter-spacing: -0.2px;
+}
+.get_a_quote--flexbox{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 47px 40px 0 40px;
+}
+.get_a_quote--form form{
+    display: flex;
+    flex-direction: column;
+}
+.get_a_quote--form input{
+    width: 604px;
+    height: 36px;
+    background-color: #d6564f;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    border: none;
+    padding-left: 15px;
+    font-family: "Lato Regular";
+    font-size: 12px;
+    line-height: 12px;
+    color: #f0d8d9;
+    outline:none;
+}
+.get_a_quote--form input::-webkit-input-placeholder{
+    color: #f48c8f;
+    font-family: 'Lato Regular', sans-serif;
+    word-spacing: -1px;
+}
+.get_a_quote--form textarea{
+    width: 602px;
+    height: 188px;
+    background-color: #d6564f;
+    border-radius: 5px;
+    border: none;
+    padding-left: 15px;
+    font-family: "Lato Regular";
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 12px;
+    color: #f0d8d9;
+    outline:none;
+} 
+.get_a_quote--form textarea::-webkit-input-placeholder{
+    color: #f48c8f;
+    font-family: "Lato Regular";
+    word-spacing: -1px;    
+}
+.get_a_quote--form button{
+    margin-top: 16px;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Lato Regular";
+    color: #d6564f;
+    outline:none;
+}
+.get_a_quote--form button:active{
+    color: #f0d8d9;
+    border: 1px solid #f0d8d9;
+    background-color: #f48c8f;
+    color: #f0d8d9;
+    outline:none;
+}
+.get_a_qoute--infos h3{
+    font-size: 18px;
+    line-height: 18px;
+    color: #f0d8d9;
+    font-family: "Lato Heavy";
+    text-align: left;
+}
+.get_a_qoute--infos p{
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.get_a_qoute--infos--text{
+    width: 300px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato Regular";
+    text-align: left;
+}
+a{
+    text-decoration: none;
+    }
+.get_a_qoute--infos--text_span{
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato Regular";
+    text-align: left;
+    padding-left: 9px;
+}
+.get_a_qoute--infos_pic_adress{
+    padding-left: 3px;
+}
+.get_a_qoute--infos_pic_phone{
+    padding-left: 1px;
+}
+
+
