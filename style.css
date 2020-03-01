@@ -138,14 +138,6 @@
     width: 100%;
     height: 218px;
 }
-.services_content_list{
-    display: flex;
-    padding: 0 40px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    height: 250px;
-  
-}
 .services_content_logo{
     padding-top: 70px;
     padding-left: 40px;
@@ -178,14 +170,21 @@
     text-align: left;
     letter-spacing: -0.35px;    
 }
-
+.services_content_list{
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*height: 250px;*/
+}
 .services_content_list_elem{    
-    width: 32%;
-    height: 90px;    
+    /*width: 33%;*/
+    /*height: 90px;*/
     display: flex;
 }
 .services_content_list_elem img{
-    height: 62px;
+    height: 61px;
+    width: 62px;
 }
 .services_content_list_text h2{
     padding-left: 18px;
@@ -200,22 +199,12 @@
     padding-left: 18px;
     padding-top: 15px;
     width: 219px;
-    height: 128px;
+    padding-bottom: 29px;
     font-size: 12px;
     line-height: 22px;
     color: #767e9e;
     font-family: "Lato Regular";
     text-align: justify;
-}
-.fix1{}
-.fix2{
-    word-spacing: -1px;
-}
-.fix3{
-    word-spacing: -1px;
-}
-.fix4{
-    word-spacing: -2px;
 }
 .last_line_services{
     height: 6px;
@@ -304,7 +293,7 @@
 .portfolio_pics{
     width: 940px;
     height: 600px;
-    margin: 19px 40px 0px 40px;
+    margin: 18px 40px 0px 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -349,12 +338,12 @@
     color: #767e9e;
     font-family: "Lato Regular";
     text-align: left;
-    letter-spacing: -0.1px;
+    letter-spacing: -0.2px;
     word-spacing: -0.6px;
 }
 .about_us--flex{
     height: 443px;
-    padding: 48px 40px 0px 40px;
+    padding: 47px 40px 0px 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -374,7 +363,8 @@
     line-height: 22px;
     color: #767e9e;
     font-family: "Lato Regular";
-    text-align: left;    
+    text-align: left;
+    word-spacing: normal;   
 }
 .about_us--social_networks{
 
@@ -392,11 +382,6 @@
     padding-right: 5px;
     transform: scale(1.2);
 }
-.fix5{
-    word-spacing: -2px;
-    letter-spacing: 0.05px;
-}
-
 .get_a_quote{
     width: 100%;
     height: 654px;
@@ -431,7 +416,7 @@
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    padding: 47px 40px 0 40px;
+    padding: 46px 40px 0 40px;
 }
 .get_a_quote--form form{
     display: flex;
@@ -469,6 +454,7 @@
     padding-top: 12px;
     color: #f0d8d9;
     outline:none;
+    resize: none;
 } 
 .get_a_quote--form textarea::-webkit-input-placeholder{
     color: #f48c8f;
@@ -509,7 +495,9 @@
     line-height: 22px;
     color: #f0d8d9;
     font-family: "Lato Regular";
-    text-align: left;
+    text-align: justify;
+    letter-spacing: -0.1px;
+
 }
 a{
     text-decoration: none;
@@ -555,7 +543,19 @@ a{
 .footer--social_networks img{
     padding-right: 1px;
 }
-
-
-
-
+.fix2{
+    word-spacing: -1px;
+}
+.fix3{
+    word-spacing: -1px;
+}
+.fix4{
+    word-spacing: -2px;
+}
+.fix5{
+    word-spacing: -2px;
+    letter-spacing: 0.05px;
+}
+.fix6{
+    letter-spacing: -0.2px;
+}
