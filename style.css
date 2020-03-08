@@ -352,7 +352,6 @@
 }
 .about_us--flex div h3{
     width: 300px;
-    height: 32px;
     padding-top: 14px;
     font-size: 18px;
     line-height: 18px;
@@ -371,7 +370,8 @@
     color: #767e9e;
     font-family: "Lato Regular";
     text-align: justify;
-    word-spacing: normal;   
+    word-spacing: normal;
+    overflow: hidden; 
 }
 .about_us--social_networks{
 
