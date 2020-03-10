@@ -298,6 +298,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 .portfolio_pics_imgs{
     margin-bottom: 20px;
