@@ -9,40 +9,42 @@
     <title>singolo</title>
 </head>
 <body>
-    <header class="header">
+    
+        <header class="header" id="header">
         <div class="header_content">
             <div class="logo">
                 <h1 class="singolo_text">singolo<span class="star">*</span></h1>
             </div>            
             <ul class="navbar_content">
-                <li class='header-list_element'>home</li>
-                <li class='header-list_element'>services</li>
-                <li class='header-list_element'>portfolio</li>
-                <li class='header-list_element'>about</li>
-                <li class='header-list_element'>contact</li>
+                <a href="#"><li class='header-list_element header-list_element--active'>home</li></a>
+                <a href="#services"><li class='header-list_element'>services</li></a>
+                <a href="#portfolio"><li class='header-list_element'>portfolio</li></a>
+                <a href="#about_us"><li class='header-list_element'>about</li></a>
+                <a href="#get_a_quote"><li class='header-list_element'>contact</li></a>
             </ul>
-            <div class="last_line_header"></div>
-            
         </div>
-    </header>
-    <div class="slider">
-        <div class="slider_content">
-            <div class="left_arrow">
-                <img class="left_arrow_image" src="assets/images/chev.png" alt="">
+        </header>
+    <div class="main">
+        <section class="slider" id="slider">
+            <div class="slider_content slider__wrapper">
+                <div class="slider-show" id='slider-show'>
+                    <div class="slide slide_first">
+                        <img class="vertical-mobile" src="./assets/images/iPhone Vertical.png" alt="">
+                        <button class="vertical_mobile-black phone_button" onclick="screenOff()"></button>
+                        <img class="horizont-mobile" src="./assets/images/iPhone Horizontal.png" alt="">
+                        <button class="horizontal_mobile-black phone_button" onclick="screenOff()"></button>
+                    </div>
+                    <div class="slide" id="slide_second">
+                        <img src="./assets/images/slider2.png" alt="iPhone Vertical">
+                    </div>
+                </div>
+                <div class="slider__buttons">
+                    <button class="switch-button" id="prev-slide"></button>
+                    <button class="switch-button" id="next-slide"></button>
+                </div>
             </div>
-            <div class="right_arrow">
-                <img class="right_arrow_image" src="assets/images/chev.png" alt="">
-            </div>
-            <div class="vertical_phone">
-                <img src="assets/images/iPhone Vertical.png" alt="" class="horizontal_phone_image">
-            </div>
-            <div class="horizontal_phone">
-                <img src="assets/images/iPhone Horizontal.png" alt="" class="vertical_phone_image">
-            </div>
-            <div class="last_line_slider"></div>
-        </div>        
-    </div>
-    <div class="services">
+        </section>
+        <div class="services" id="services">
         <div class="services_content">
             <div class="services_content_text">
                 <h1 class="services_content_logo">Our Services</h1>
@@ -99,10 +101,9 @@
                     </div>
                 </div>
             </div>
-            <div class="last_line_services"></div>
         </div>
-    </div>
-    <div class="portfolio">
+        </div>
+        <div class="portfolio" id="portfolio">
         <div class="portfolio_content">
             <div class="portfolio_logo">
                 <h2>Portfolio</h2>                
@@ -111,10 +112,10 @@
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             </div>
             <div class="portfolio_navbar">
-                <div id="portfolio--all"><p>All</p></div>
-                <div id="portfolio--web_design"><p>Web Design</p></div>
-                <div id="portfolio--graphic_design"><p>Graphic Design</p></div>
-                <div id="portfolio--artwork"><p>Artwork</p></div>
+                <button class="tag" id="portfolio--all">All</button>
+                <button class="tag" id="portfolio--web_design">Web Design</button>
+                <button class="tag" id="portfolio--graphic_design">Graphic Design</button>
+                <button class="tag" id="portfolio--artwork">Artwork</button>
             </div>
             <div class="portfolio_pics">
                 <div class="portfolio_pics_imgs"><img src="assets/images/1.png" alt=""></div>
@@ -131,8 +132,8 @@
                 <div class="portfolio_pics_imgs"><img src="assets/images/12.png" alt=""></div>
             </div>
         </div>
-    </div>
-    <div class="about_us">
+        </div>
+        <div class="about_us" id="about_us">
         <div class="about_us--content">
             <div class="about_us--text">
                 <h2>About Us</h2>
@@ -174,8 +175,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="get_a_quote">
+        </div>
+        <div class="get_a_quote" id="get_a_quote">
         <div class="get_a_quote--content">
             <div class="get_a_quote--text">
                 <h2>Get a Quote</h2>
@@ -183,12 +184,12 @@
             </div>
             <div class="get_a_quote--flexbox">
                 <div class="get_a_quote--form">
-                    <form action method="POST">
-                        <input type="text" name="name" placeholder="Name (Required)" required="">
-                        <input type="email" name="email" placeholder="Email (Required)" required="">
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="question" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-                        <button type="submit">Submit</button>
+                    <form action method="POST" id="get_a_qoute--form">
+                        <input id="get_a_qoute--name"type="text" name="name" placeholder="Name (Required)" required="">
+                        <input id="get_a_qoute--email"type="email" name="email" placeholder="Email (Required)" required="">
+                        <input id="get_a_qoute--subject"type="text" name="subject" placeholder="Subject">
+                        <textarea id="get_a_qoute--description" name="question" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+                        <button id="get_a_qoute--submit"type="submit">Submit</button>
                     </form>
                 </div>
                 <div class="get_a_qoute--infos">
@@ -199,10 +200,18 @@
                     <div class="get_a_qoute--infos"><a href="malito:info@singolo.com"> <img class="get_a_qoute--infos_pic_mail"src="assets/images/mail.png" alt=""> <span class="get_a_qoute--infos--text get_a_qoute--infos--text_span">info@singolo.com</span></a></div>
                 </div>
             </div>
-    </div>
+            <div class="message-block hidden" id="message-block">
+                <div class="message">
+                    <p class="message-title">Письмо отправлено</p>
+                    <p id="subject-message"></p>
+                    <p id="describe-message"></p>
+                    <button class="button-close" id="button-close">close</button>
+                </div>
+            </div>
+        </div>
         
-    </div>
-    <footer class="footer">
+        </div>
+        <footer class="footer">
         <div class="footer--content">
             <p>© Copyright 2013 · by PSDchat.com</p>
             <div class="footer--social_networks">
@@ -212,7 +221,8 @@
                 <img src="assets/images/linkedin.png" alt="">
             </div>
         </div>
-    </footer>
-    
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
