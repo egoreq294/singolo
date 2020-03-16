@@ -226,11 +226,9 @@ html {
     padding: 0 40px;
     justify-content: space-between;
     flex-wrap: wrap;
-    /*height: 250px;*/
 }
 .services_content_list_elem{    
-    /*width: 33%;*/
-    /*height: 90px;*/
+
     display: flex;
 }
 .services_content_list_elem img{
@@ -311,17 +309,6 @@ html {
     color: #dedede;
     border-color: #dedede;
 }
-.portfolio_navbar div{
-    border: 0.5px solid #767e9e;
-    border-radius: 5px;
-}
-.portfolio_navbar p{
-    font-size: 12px;
-    line-height: 22px;
-    color: #767e9e;
-    font-family: "Lato Regular";
-    text-align: center;
-}
 #portfolio--all{
     width: 27px;
 }
@@ -333,6 +320,20 @@ html {
 }
 #portfolio--artwork{
     width: 55px;
+}
+.tag{    
+    font-size: 11px;
+    color: #767e9e;
+    font-family: "Lato Regular";
+    text-align: center;
+    outline: none;
+    background: transparent;        
+    border: 0.5px solid #767e9e;
+    border-radius: 5px;
+}
+.tag_active{
+    border: 1px solid #dedede;
+    color: #dedede;
 }
 .portfolio_pics{
     width: 940px;
@@ -347,6 +348,11 @@ html {
     margin-bottom: 20px;
     width: 220px;
     height: 187px;
+    cursor: pointer;
+}
+.picture_active{   
+    outline: solid 5px #767e9e;
+    outline-offset:-5px;
 }
 .about_us{
     width: 100%;
@@ -619,3 +625,54 @@ a{
 .fix6{
     letter-spacing: -0.2px;
 }
+.message-block {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #0008;
+    z-index: 4;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    overflow-wrap: break-word;
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background: #2d303a;
+    color: #f0d8d9;
+    text-align: center;
+    border: solid 2px #f48c8f;
+    border-radius: 20px;
+    overflow: auto;
+}
+.message p{
+    width: 100%;
+    font-size: 22px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato Regular";
+    text-align: center;
+    margin-top: 2%;
+}
+
+.message-title {
+    color: #dedede;
+}
+.button-close{
+    margin: 2% 0;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Lato Regular";
+    color: #d6564f;
+    outline:none;
+}
+

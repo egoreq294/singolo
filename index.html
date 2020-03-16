@@ -112,10 +112,10 @@
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             </div>
             <div class="portfolio_navbar">
-                <div id="portfolio--all"><p>All</p></div>
-                <div id="portfolio--web_design"><p>Web Design</p></div>
-                <div id="portfolio--graphic_design"><p>Graphic Design</p></div>
-                <div id="portfolio--artwork"><p>Artwork</p></div>
+                <button class="tag" id="portfolio--all">All</button>
+                <button class="tag" id="portfolio--web_design">Web Design</button>
+                <button class="tag" id="portfolio--graphic_design">Graphic Design</button>
+                <button class="tag" id="portfolio--artwork">Artwork</button>
             </div>
             <div class="portfolio_pics">
                 <div class="portfolio_pics_imgs"><img src="assets/images/1.png" alt=""></div>
@@ -184,12 +184,12 @@
             </div>
             <div class="get_a_quote--flexbox">
                 <div class="get_a_quote--form">
-                    <form action method="POST">
-                        <input type="text" name="name" placeholder="Name (Required)" required="">
-                        <input type="email" name="email" placeholder="Email (Required)" required="">
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="question" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-                        <button type="submit">Submit</button>
+                    <form action method="POST" id="get_a_qoute--form">
+                        <input id="get_a_qoute--name"type="text" name="name" placeholder="Name (Required)" required="">
+                        <input id="get_a_qoute--email"type="email" name="email" placeholder="Email (Required)" required="">
+                        <input id="get_a_qoute--subject"type="text" name="subject" placeholder="Subject">
+                        <textarea id="get_a_qoute--description" name="question" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+                        <button id="get_a_qoute--submit"type="submit">Submit</button>
                     </form>
                 </div>
                 <div class="get_a_qoute--infos">
@@ -200,7 +200,15 @@
                     <div class="get_a_qoute--infos"><a href="malito:info@singolo.com"> <img class="get_a_qoute--infos_pic_mail"src="assets/images/mail.png" alt=""> <span class="get_a_qoute--infos--text get_a_qoute--infos--text_span">info@singolo.com</span></a></div>
                 </div>
             </div>
-    </div>
+            <div class="message-block hidden" id="message-block">
+                <div class="message">
+                    <p class="message-title">Письмо отправлено</p>
+                    <p id="subject-message"></p>
+                    <p id="describe-message"></p>
+                    <button class="button-close" id="button-close">close</button>
+                </div>
+            </div>
+        </div>
         
         </div>
         <footer class="footer">
