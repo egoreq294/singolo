@@ -351,7 +351,7 @@ html {
     cursor: pointer;
 }
 .picture_active{   
-    outline: solid 5px #767e9e;
+    outline: solid 5px #F06C64;
     outline-offset:-5px;
 }
 .about_us{
