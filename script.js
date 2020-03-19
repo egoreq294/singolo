@@ -21,7 +21,6 @@ function onscroll(){
                 a.querySelector('li').classList.remove('header-list_element--active');
                 if(element.getAttribute('id') === a.getAttribute('href').substring(1)){
                     a.querySelector('li').classList.add('header-list_element--active');
-                    console.log(a.querySelector('li'));
                 }
             });
         }
