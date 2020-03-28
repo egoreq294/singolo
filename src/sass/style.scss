@@ -1,32 +1,49 @@
-@import "./fonts.scss";
-html {
+@import "./fonts";
+$min_border:320px;
+$mobile:374px;
+$tablet:767px;  
+$desktop: 1019px;
+
+html{
     scroll-behavior: smooth;
 }
 body{
-    margin: 0;
+    box-sizing: border-box;
+    min-width: 320px;
 }
 .main{
     padding-top : 95px;
+    @media(max-width: $tablet){
+        padding-top : 71px;
+    }
 }
 .header{
     background-color: #2d303a;
-    height: 95px;
     box-shadow: inset 0 -6px #323746;
-    width: 100%;
+    height: 95px;
+    width: 100vw;
     position: fixed;
-    padding-top: -95px;
     z-index: 3;
+    @media(max-width: $tablet){
+        height: 71px;
+    }
 }
 .header_content{
-    width: 1020px;
-    height: 95px;
+    max-width: 1020px;
+    min-width: 320px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 .logo{
-    display: flex;
-    float: left;
-    margin-top: 41px;
-    margin-left: 40px;
+    @media (min-width: $tablet){        
+        margin-top: 41px;
+        margin-left: 40px;
+    }
+    @media(max-width: $tablet){
+        margin: auto;
+        margin-top: 41px;
+    }
     
 }
 .singolo_text{
@@ -40,11 +57,30 @@ body{
 .star{
     color: #d6645e;
 }
+.header_menu_button{
+    display: flex;
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin: 25px 0 0 20px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    background: transparent;
+    background-image: url("../img/Burger-menu-icon.png");
+    @media(min-width: $tablet){
+        display: none;
+    }
+   
+}
 .navbar_content{
     float:right;
     display: flex;
     margin-right: 26px;
     margin-top: 32px;
+    @media(max-width: $tablet){
+        display: none;
+    }
 }
 .header-list_element{
     font-size: 12px;
@@ -57,12 +93,7 @@ body{
     letter-spacing: -0.15px;
     text-decoration: none;
 }
-.header-list_element--active{
-    color: #f06c64;
-}
-.header-list_element:hover{
-    color: #f06c64;
-}
+
 .header-list_element::after{
     content: '';
     background-color: #494e62;
@@ -75,6 +106,39 @@ body{
 .header-list_element:last-child::after{
     display: none;
 }
+.header_burger_ul{
+    display: block;
+    position: fixed;
+    left: 71px;
+    top: 232px;
+}
+.header_burger_list{
+    display: block;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #2d303a;    
+}
+.header_burger_ul_li{
+    font-family: 'Lato Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.035em;
+    text-decoration: none;    
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.header-list_element--active{
+    color: #f06c64;
+}
+.header-list_element:hover{
+    color: #f06c64;
+}
 .slider{
     height: 594px;
     width: 100%;
@@ -82,9 +146,15 @@ body{
     border-bottom: solid 6px #ea676b;
     user-select: none; 
     transition: all ease 0.6s;
+    @media (min-width: $tablet) and (max-width: $desktop){
+        height: 447px;
+    }
+    @media (max-width: $tablet){
+        height: 218px;
+    }
 }
 .slider_content{
-    width: 1020px;
+    max-width: 1020px;
     margin: auto;
 }
 .slider__wrapper{
@@ -98,17 +168,23 @@ body{
 
 .slider-show {
     position: absolute;
-    width: 1020px;
+    width: 100%;
     height: 594px;
     overflow: hidden;
     z-index: 1;
     user-select: none;
+    @media (min-width: $tablet) and (max-width: $desktop){
+        height: 447px;
+    }
+    @media (max-width: $tablet){
+        height: 218px;
+    }
 }
 
 .slide {
-    width: 1020px;
-    height: 594px;
+    box-sizing: border-box;
     position: absolute;
+    display: flex;
     top: 0;
     left: 0;
     transition: all ease 1s;
@@ -117,13 +193,51 @@ body{
     position: absolute;
     top: 50px;
     left: 250px;
+    @media (min-width: $tablet) and (max-width: $desktop){
+        top:6vh;
+        left:30vw;
+        height: 344px;
+    }
+    @media (max-width: $tablet){
+        top:3vh;
+        left:30vw;
+        height: 168px;
+    }
 }
 
 .horizont-mobile {
-    margin:0 0 122px 69px;
+    position: absolute;    
+    top: 177px;
+    left: 425px;
+    @media (min-width: $tablet) and (max-width: $desktop){
+        width: 344px;
+        height: 162px;
+        top: 15vh;
+        left: 45vw;
+    }
+    @media (max-width: $tablet){
+        width: 168px;
+        height: 79px;
+        top: 8vh;
+        left: 39vw;
+    }
 }
 .vertical-mobile {
-    margin:53px 0 0 112px;
+    position: absolute;
+    top: 54px;
+    left: 111px;
+    @media (min-width: $tablet) and (max-width: $desktop){
+        width: 162px;
+        height: 344px;
+        top: 4vh;
+        left: 19vw;
+    }
+    @media (max-width: $tablet){
+        width: 79px;
+        height: 168px;
+        top: 2vh;
+        left: 18vw;
+    }   
 }
 .vertical_mobile-black{
     position: absolute;
@@ -143,7 +257,8 @@ body{
     border: 0;
     outline: none;
 }
-.phone_button{    
+.phone_button{
+    cursor: pointer;
     background: transparent;
 }
 .slider__buttons {
@@ -153,6 +268,12 @@ body{
     top: 281px;
     display: flex;
     justify-content: space-between;
+    @media (min-width: $tablet) and (max-width: $desktop){
+        top:207px;
+    }
+    @media (max-width: $tablet){
+        top: 97px;
+    }
 }
 
 .switch-button {
@@ -178,20 +299,19 @@ body{
     opacity: 0.4;
 }
 
+
+
+
 .services{
     background-color: #f2f2f2;
-    height: 500px;
-    box-shadow: inset 0 -6px #ffffff;
 }
 .services_content{
-    width: 1020px;
-    height: 500px;
+    max-width: 1020px;    
     margin: auto;
     background-color: #f2f2f2;
 }
 .services_content_text{
     width: 100%;
-    height: 218px;
 }
 .services_content_logo{
     padding-top: 70px;
@@ -206,8 +326,7 @@ body{
     
 }
 .services_content_logo_text_1{
-    padding-top: 25px;
-    padding-left: 41px;
+    padding: 25px 41px 0 41px;
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
@@ -216,24 +335,22 @@ body{
     letter-spacing: -0.35px;
     word-spacing: 1.05px;
 }
-.services_content_logo_text_2{
-    font-size: 18px;
-    padding-left: 41px;
-    line-height: 30px;
-    color: #767e9e;
-    font-family: "Lato Regular";
-    text-align: justify;
-    letter-spacing: -0.35px;    
-}
 .services_content_list{
     display: flex;
-    padding: 0 40px;
+    padding: 30px 40px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.services_content_list_elem{    
-
+.services_content_list_elem{
     display: flex;
+    width: 33%;
+    @media (min-width: $tablet) and (max-width: $desktop){
+        width: 50%;
+    }
+    @media (max-width: $tablet){
+        width: 100%;
+        justify-content: center;
+    }
 }
 .services_content_list_elem img{
     height: 61px;
@@ -260,20 +377,21 @@ body{
     text-align: justify;
     overflow: hidden;
 }
+
+
+
+
+
 .portfolio{
-    height: 870px;
     background-color: #2d303a;
     box-shadow: inset 0 -6px #323746;
 }
 .portfolio_content{
-    width: 1020px;
-    height: 870px;
+    max-width: 1020px;
     margin: auto;
     box-shadow: inset 0 -6px #323746;
 }
 .portfolio_logo{
-    width: 120px;
-    height: 22px;
     padding-left: 41px;
     padding-top: 68px;
 }
@@ -286,13 +404,9 @@ body{
     letter-spacing: 0.5px;
 }
 .portfolio_logo_text{
-    padding-top: 24px;
-    padding-left: 41px;
-    height: 13px;
+    padding: 24px 41px;
 }
 .portfolio_logo_text p{
-    width: 940px;
-    height: 57px;
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
@@ -302,7 +416,6 @@ body{
     letter-spacing: -0.3px;
 }
 .portfolio_navbar{
-    padding-top: 28px;
     padding-left: 41px;
     height: 22px;
     width: 287px;
@@ -340,33 +453,44 @@ body{
     color: #dedede;
 }
 .portfolio_pics{
-    width: 940px;
-    height: 600px;
     margin: 18px 40px 0px 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;
+    @media (max-width: $tablet){
+        margin: 18px 40px 0px 30px;
+        height: 148vw;
+    }
 }
 .portfolio_pics_imgs{
     margin-bottom: 20px;
-    width: 220px;
-    height: 187px;
+    width: 25%;
     cursor: pointer;
+    @media (min-width: $tablet) and (max-width: $desktop){
+        width: 33%;
+    }
+    @media (max-width: $tablet){
+        width: 50%;
+    }
+}
+.portfolio_pics_imgs img{
+    width: 90%;
 }
 .picture_active{   
     outline: solid 5px #F06C64;
     outline-offset:-5px;
 }
+
+
+
+
 .about_us{
-    width: 100%;
-    height: 734px;
     background-color: #f2f2f2;
     box-shadow: inset 0 -6px #ffffff;
 }
 .about_us--content{
-    width: 1020px;
-    height: 734px;
+    max-width: 1020px;
     margin: auto;
     background-color: #f2f2f2;
     box-shadow: inset 0 -6px #ffffff;
@@ -387,8 +511,7 @@ body{
 }
 .about_us--text p{
     padding-top: 27px;
-    width: 940px;
-    height: 57px;
+    padding-right: 40px;
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
@@ -398,14 +521,12 @@ body{
     word-spacing: -0.6px;
 }
 .about_us--flex{
-    height: 443px;
-    padding: 47px 40px 0px 40px;
+    padding: 47px 40px 40px 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 .about_us--flex div h3{
-    width: 300px;
     padding-top: 14px;
     font-size: 18px;
     line-height: 18px;
@@ -418,7 +539,6 @@ body{
 }
 .about_us--flex div p{
     padding-top: 10px;
-    width: 300px;
     font-size: 12px;
     line-height: 22px;
     color: #767e9e;
@@ -427,8 +547,17 @@ body{
     word-spacing: normal;
     overflow: hidden; 
 }
+.about_us--person{
+    width: 32%;
+    @media (max-width: $tablet){
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
+.about_us--person img{
+    width: 100%;
+}
 .about_us--social_networks{
-
     padding-top: 21px;
     display: flex;
 }
@@ -443,15 +572,17 @@ body{
     padding-right: 5px;
     transform: scale(1.2);
 }
+
+
+
+
 .get_a_quote{
     width: 100%;
-    height: 654px;
     box-shadow: inset 0 -6px #ea676b;
     background-color: #f06c64;
 }
 .get_a_quote--content{
-    width: 1020px;
-    height: 654px;
+    max-width: 1020px;
     margin: auto;
 }
 .get_a_quote--text h2{
@@ -463,8 +594,6 @@ body{
     padding: 68px 40px 0 40px;
 }
 .get_a_quote--text p{
-    width: 940px;
-    height: 57px;
     font-size: 18px;
     line-height: 30px;
     color: #f0d8d9;
@@ -478,13 +607,21 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding: 46px 40px 0 40px;
+    @media (max-width: $tablet){
+        display: block;
+    }
+}
+.get_a_quote--form{
+    width: 60%;
+    @media (max-width: $tablet){
+        width: 100%;
+    }
 }
 .get_a_quote--form form{
     display: flex;
     flex-direction: column;
 }
 .get_a_quote--form input{
-    width: 604px;
     height: 36px;
     background-color: #d6564f;
     border-radius: 5px;
@@ -503,7 +640,6 @@ body{
     word-spacing: -1px;
 }
 .get_a_quote--form textarea{
-    width: 602px;
     height: 188px;
     background-color: #d6564f;
     border-radius: 5px;
@@ -540,6 +676,10 @@ body{
     font-family: "Lato Regular";
     color: #d6564f;
     outline:none;
+    margin-bottom: 20px;
+    @media (max-width: $tablet){
+        width: 100%;
+    }
 }
 .get_a_quote--form button:active{
     color: #f0d8d9;
@@ -548,19 +688,25 @@ body{
     color: #f0d8d9;
     outline:none;
 }
-.get_a_qoute--infos h3{
+.get_a_qoute--infos_1{
+    width: 35%;
+    @media (max-width: $tablet){
+        width: 100%;
+        padding-top: 20px;
+    }
+}
+.get_a_qoute--infos_1 h3{
     font-size: 18px;
     line-height: 18px;
     color: #f0d8d9;
     font-family: "Lato Heavy";
     text-align: left;
 }
-.get_a_qoute--infos p{
+.get_a_qoute--infos_1 p{
     padding-top: 10px;
     margin-bottom: 20px;
 }
 .get_a_qoute--infos--text{
-    width: 300px;
     font-size: 12px;
     line-height: 22px;
     color: #f0d8d9;
@@ -586,13 +732,17 @@ a{
 .get_a_qoute--infos_pic_phone{
     padding-left: 1px;
 }
+
+
+
+
 .footer{
     height: 76px;
     width: 100%;
     background-color: #2d303a;
 }
 .footer--content{
-    width: 1020px;
+    max-width: 1020px;
     height: 76px;
     margin: auto;
 }
@@ -601,10 +751,22 @@ a{
     padding: 32px 0px 0px 42px;
     color: #666d89;
     font-size: 12px;
+    @media (max-width: $tablet){
+        display: none;
+    }
 }
 .footer--social_networks{
     float: right;
-    padding: 21px 37px 0px 0px;
+    @media (min-width: $tablet){
+        padding: 21px 37px 0px 0px;
+    }
+    
+    @media (max-width: $tablet){
+        float: none;
+        padding-top: 20px;
+        margin: auto;
+        display: table;
+    }
 }
 .footer--social_networks img:hover{
     transform: scale(1.2);

@@ -9,16 +9,19 @@
 <body>
     <header class="header" id="header">
         <div class="header_content">
+            <button class="header_menu_button"></button>
             <div class="logo">
                 <h1 class="singolo_text">singolo<span class="star">*</span></h1>
-            </div>            
-            <ul class="navbar_content">
-                <a href="#slider"><li class='header-list_element header-list_element--active'>home</li></a>
-                <a href="#services"><li class='header-list_element'>services</li></a>
-                <a href="#portfolio"><li class='header-list_element'>portfolio</li></a>
-                <a href="#about_us"><li class='header-list_element'>about</li></a>
-                <a href="#get_a_quote"><li class='header-list_element'>contact</li></a>
-            </ul>
+            </div>
+            <div class="header_burger">
+                <ul class="navbar_content">
+                    <a href="#slider"><li class='header-list_element header-list_element--active'>home</li></a>
+                    <a href="#services"><li class='header-list_element'>services</li></a>
+                    <a href="#portfolio"><li class='header-list_element'>portfolio</li></a>
+                    <a href="#about_us"><li class='header-list_element'>about</li></a>
+                    <a href="#get_a_quote"><li class='header-list_element'>contact</li></a>
+                </ul>
+            </div>
         </div>
         </header>
     <div class="main">
@@ -27,9 +30,9 @@
                 <div class="slider-show" id='slider-show'>
                     <div class="slide slide_first">
                         <img class="vertical-mobile" src="./src/img/iPhone Vertical.png" alt="">
-                        <button class="vertical_mobile-black phone_button" onclick="screenOff()"></button>
+                        <button class="vertical_mobile-black phone_button"></button>
                         <img class="horizont-mobile" src="./src/img/iPhone Horizontal.png" alt="">
-                        <button class="horizontal_mobile-black phone_button" onclick="screenOff()"></button>
+                        <button class="horizontal_mobile-black phone_button"></button>
                     </div>
                     <div class="slide" id="slide_second">
                         <img src="./src/img/slider2.png" alt="iPhone Vertical">
@@ -47,10 +50,7 @@
                 <h1 class="services_content_logo">Our Services</h1>
                 <p class="services_content_logo_text_1">
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, 
-                    non commodo luctus, nisi erat porttitor 
-                </p>
-                <p class="services_content_logo_text_2">
-                    ligula, eget lacinia odio sem nec elit. 
+                    non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                 </p>
             </div>
@@ -66,7 +66,7 @@
                     <img src="./src/img/bulb.png" alt="">
                     <div class="services_content_list_text">
                         <h2>Inovative Ideas</h2>
-                        <p> <span class="fix1"> Quisque luctus, quam eget molestie com-</span><br>modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                        <p> Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     </div>
                 </div>
                 <div class="services_content_list_elem">
@@ -80,14 +80,14 @@
                     <img src="./src/img/phone.png" alt="">
                     <div class="services_content_list_text">
                         <h2>Responsive Layout</h2>
-                        <p>Sed porttitor placerat rhoncus. In at nunc <span class="fix2">tellus. Maecenas blandit nunc ligula. Prae-<br>sent elit leo.</p>
+                        <p>Sed porttitor placerat rhoncus. In at nunctellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
                     </div>
                 </div>
                 <div class="services_content_list_elem">
                     <img src="./src/img/bubble.png" alt="">
                     <div class="services_content_list_text">
                         <h2>24<span class="fix4"> / </span>7 Support</h2>
-                        <p>Vivamus vel quam lacinia, tincidunt dui <span class="fix3">non, vehicula nisi. Nulla a sem erat. Pellen-</span><br>tesque egestas venenatis lorem.</p>
+                        <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
                     </div>
                 </div>
                 <div class="services_content_list_elem">
@@ -134,10 +134,10 @@
         <div class="about_us--content">
             <div class="about_us--text">
                 <h2>About Us</h2>
-                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor <span class="fix5"> ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             </div>
             <div class="about_us--flex">
-                <div class="about_us--person1">
+                <div class="about_us--person">
                     <img src="./src/img/person1.png" alt="">
                     <h3>Adam Jensen</h3>
                     <p> <span class="fix6">Quisque luctus, quam eget molestie commodo, lacus purus </span>cursus purus, nec rutrum tellus dolor id lorem.</p>
@@ -148,7 +148,7 @@
                         <img src="./src/img/linkedin.png" alt="">
                     </div>
                 </div>
-                <div class="about_us--person2">
+                <div class="about_us--person">
                     <img src="./src/img/person2.png" alt="">
                     <h3>Desmond Miles</h3>
                     <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
@@ -159,7 +159,7 @@
                         <img src="./src/img/linkedin.png" alt="">
                     </div>
                 </div>
-                <div class="about_us--person3">
+                <div class="about_us--person">
                     <img src="./src/img/person3.png" alt="">
                     <h3>Scolara Visari</h3>
                     <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
@@ -189,7 +189,7 @@
                         <button id="get_a_qoute--submit"type="submit">Submit</button>
                     </form>
                 </div>
-                <div class="get_a_qoute--infos">
+                <div class="get_a_qoute--infos_1">
                     <h3>Contact Information</h3>
                     <p class="get_a_qoute--infos--text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-<br>ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
                     <div class="get_a_qoute--infos"><img class="get_a_qoute--infos_pic_adress" src="./src/img/location.png" alt=""> <span class="get_a_qoute--infos--text get_a_qoute--infos--text_span">Elm St. 14/05 Lost City</span></div>

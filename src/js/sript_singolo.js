@@ -9,6 +9,20 @@ menuHeader.addEventListener('click',(event)=>{
     event.target.classList.add('header-list_element--active');
     }
 });
+let burger = false;
+let ul = document.querySelector('.header_burger');
+document.querySelector('.header_menu_button').addEventListener('click', ()=>{
+    console.log('test');
+    if(burger === false){
+        burger = true;
+        console.log('test1');
+        ul.querySelector('ul').classList.add('.header_burger_list');
+    }
+    else{
+        burger = false;
+        ul.querySelector('ul').classList.remove('.header_burger_list');
+    }
+});
 
 document.addEventListener('scroll', onscroll);
 function onscroll(){
@@ -26,6 +40,7 @@ function onscroll(){
         }
     });
 }
+
 //
 // slider
 //
@@ -116,7 +131,8 @@ slider.addEventListener('transitionend', function () {
 
 
 let screenoff = false;
-function screenOff(){
+function screenblack(){
+    console.log('test');
     if(screenoff == true){
         screenoff=false;
         document.querySelectorAll(".phone_button").forEach(item=>item.style.background="transparent");
@@ -126,6 +142,9 @@ function screenOff(){
         document.querySelectorAll(".phone_button").forEach(item => item.style.background="black");
     }
 }
+
+document.querySelectorAll('.phone_button').forEach(item => item.addEventListener('click',screenblack));
+
 //
 //portfolio
 //
