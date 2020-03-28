@@ -249,7 +249,7 @@ slider.addEventListener('transitionend', function () {
 });
 var screenoff = false;
 
-function screenOff() {
+function screenblack() {
   if (screenoff == true) {
     screenoff = false;
     document.querySelectorAll(".phone_button").forEach(function (item) {
@@ -261,10 +261,13 @@ function screenOff() {
       return item.style.background = "black";
     });
   }
-} //
+}
+
+document.querySelectorAll('.phone_button').forEach(function (item) {
+  return item.addEventListener('click', screenblack);
+}); //
 //portfolio
 //
-
 
 var tags = document.querySelectorAll('.tag');
 

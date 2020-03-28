@@ -142,7 +142,7 @@ slider.addEventListener('transitionend', function () {
 
 
 let screenoff = false;
-function screenOff(){
+function screenblack(){
     if(screenoff == true){
         screenoff=false;
         document.querySelectorAll(".phone_button").forEach(item=>item.style.background="transparent");
@@ -152,6 +152,9 @@ function screenOff(){
         document.querySelectorAll(".phone_button").forEach(item => item.style.background="black");
     }
 }
+
+
+document.querySelectorAll('.phone_button').forEach(item => item.addEventListener('click',screenblack));
 //
 //portfolio
 //
